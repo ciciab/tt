@@ -1,0 +1,37 @@
+{% extends "rawinventory/base.html" %}
+{% block content %}
+{% load custom_tag %}
+<div class="container">
+    <div class="row">
+
+        {% if  object.status != 'newsea' and object.status != 'newair' %}
+        <div class="row">
+            <div class="col-md-12" style="text-align:center;">
+                <div class="" style=" background-color:white;display:block;font-size: 12px;padding:10px">
+
+                    <form enctype="multipart/form-data" method="GET">{% csrf_token %}
+                        <div style="text-align:center; padding:25px"><b>备注给办公室：</b></div>
+                        <textarea rows = 3 class="form-control" id="note" name="note" type="textarea"  >{{object.note}}</textarea>
+                        <button class=" btn-block btn btn-sm btn-primary mt-1" type="submit">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align:center;">
+                <div class="" style=" background-color:white;display:block;font-size: 12px;padding:10px">
+
+                    <form enctype="multipart/form-data" method="GET">{% csrf_token %}
+                        <div style="text-align:center; padding:25px"><b>备注给仓库：</b></div>
+                        <textarea rows = 3 class="form-control" id="packnote" name="packnote" type="textarea"  >{{object.packnote}}</textarea>
+                        <button class=" btn-block btn btn-sm btn-primary mt-1" type="submit">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+    </div>
+</div>
+{% endblock content %}
