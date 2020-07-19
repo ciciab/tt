@@ -10,7 +10,7 @@
                 <div class="" style=" background-color:white;display:block;font-size: 12px;padding:10px">
 
                     <form enctype="multipart/form-data" method="GET">{% csrf_token %}
-                        <div style="text-align:center; padding:25px"><b>备注给办公室：</b></div>
+                        <div style="text-align:center; padding:25px"><b>备注给我：</b></div>
                         <textarea rows = 3 class="form-control" id="note" name="note" type="textarea"  >{{object.note}}</textarea>
                         <button class=" btn-block btn btn-sm btn-primary mt-1" type="submit">保存</button>
                     </form>
@@ -23,7 +23,7 @@
                 <div class="" style=" background-color:white;display:block;font-size: 12px;padding:10px">
 
                     <form enctype="multipart/form-data" method="GET">{% csrf_token %}
-                        <div style="text-align:center; padding:25px"><b>备注给仓库：</b></div>
+                        <div style="text-align:center; padding:25px"><b>备注给你：</b></div>
                         <textarea rows = 3 class="form-control" id="packnote" name="packnote" type="textarea"  >{{object.packnote}}</textarea>
                         <button class=" btn-block btn btn-sm btn-primary mt-1" type="submit">保存</button>
                     </form>
